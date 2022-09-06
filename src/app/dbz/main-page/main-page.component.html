@@ -1,0 +1,20 @@
+<h1>Dragon Ball Z</h1>
+<app-personajes [personajes]="personajes">
+</app-personajes>
+<!--
+<div class="col">
+    <h3>Personajes</h3>
+    <hr>
+    <ul  *ngFor="let personaje of personajes">
+        <li >{{personaje.nombre}} - {{personaje.poder }}</li>
+        
+    </ul>
+</div>
+--> 
+<div class="col">
+    <app-agregar     
+    [nuevo] = "personajeDefecto"
+    (onNuevoPersonaje)="agregarNuevoPersonaje($event)">
+
+    </app-agregar>
+</div>
